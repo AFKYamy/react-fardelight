@@ -5,7 +5,7 @@ import NavControls from "./NavControls";
 
 export default function Navbar() {
     return (
-        <nav className="border-2 border-solid border-[red] flex justify-between items-center mx-auto py-6 container">
+        <nav className="flex justify-between items-center mx-auto py-6 container">
             <Link to="/">
                 <h2 className="text-2xl font-semibold">
                     FAR

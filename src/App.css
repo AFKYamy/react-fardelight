@@ -1,9 +1,35 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
     font-family: "Lexend", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+li {
+    color: var(--color-black);
+}
+
+h1 {
+    @apply text-5xl;
+}
+
+h2 {
+    @apply text-3xl;
+}
+
+h3 {
+    @apply text-xl;
 }
 
 .navlink:before {
