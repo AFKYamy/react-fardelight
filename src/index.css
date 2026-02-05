@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+    --color-primary: #fe9905;
+    --color-black: #212121;
+    --color-light-gray: #f7f7f7;
+    --color-gray: #989898;
+}

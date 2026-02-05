@@ -1,7 +1,11 @@
+// components
+import Navbar from "@/components/nav/Navbar";
+
 export default function Ingredients() {
     return (
-        <div>
-            FarDelight Ingredients
-        </div>
+        <>
+            <Navbar />
+            Ingredients
+        </>
     )
 }

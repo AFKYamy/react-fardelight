@@ -1,7 +1,24 @@
 @import "tailwindcss";
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+html {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.navlink:before {
+    display: inline-block;
+    margin-right: 0.5em;
+    border-radius: 50%;
+    content: "";
+    width: 0.45em;
+    height: 0.45em;
+    background-color: var(--color-primary);
+    opacity: 0;
+    transition: ease-in-out 0.2s;
+}
+
+.navlink:hover:before,
+.navlink.active:before {
+    opacity: 100;
 }
