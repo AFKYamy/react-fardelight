@@ -1,4 +1,6 @@
-export const meals = [
+import type { MealType } from "@/types/recipes/foods.ts";
+
+export const meals: MealType[] = [
     {
         id: "meals1",
         slug: "fruit-salad",
