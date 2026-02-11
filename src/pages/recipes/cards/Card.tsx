@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 type Card = {
     slug: string;
     name: string;
-    img: string
+    img: string;
 }
 
 export default function Card({ slug, name, img }: Card) {
