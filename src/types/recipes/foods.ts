@@ -1,9 +1,17 @@
-export type mealsTypes = {
+export type MealType = {
     id: string,
     slug: string,
     name: string,
     type: string,
-    craft: string,
+    description: string,
+    ingredients: {
+        name: string,
+        amount: number
+    }[],
+    crafting: {
+        source: string,
+        img: string
+    }
     stats: {
         hunger: number,
         saturation: number
