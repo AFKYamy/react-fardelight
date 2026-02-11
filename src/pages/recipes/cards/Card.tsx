@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 // types
 type Card = {
-    slug: string,
-    name: string,
+    slug: string;
+    name: string;
     img: string
 }
 
