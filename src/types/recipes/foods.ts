@@ -21,7 +21,7 @@ export type FoodType = {
     };
     effects?: {
         name: FoodEffects;
-        duration: number;
+        duration?: number;
     }[];
     img: string;
 }

@@ -1,7 +1,7 @@
 import { Navigate, useParams } from "react-router-dom";
 
 // lib
-import findRecipe from "@/lib/findRecipe";
+import { findRecipe } from "@/lib/recipes";
 
 export default function RecipeDetail() {
     const { slug } = useParams<{ slug: string }>();

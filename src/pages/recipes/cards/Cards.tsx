@@ -1,19 +1,22 @@
+// contexts
+import { useRecipesContext } from "@/contexts/RecipesContext";
+
 // components
 import Card from "./Card";
 
-// data
-import { meals } from "@/data/recipes";
-
 export default function Cards() {
+    const { selectedRecipes } = useRecipesContext();
+
     return (
-        <section className="flex justify-between gap-7 flex-wrap mx-auto my-25 container">
+        <section className="flex justify-between gap-7 flex-wrap mx-auto my-20 container">
             {
-                meals.map((meal) => (
+                selectedRecipes.map((rec) => (
                     <Card
-                        key={meal.id}
-                        slug={meal.slug}
-                        name={meal.name}
-                        img={meal.img}
+                        key={rec.id}
+                        slug={rec.slug}
+                        name={rec.name}
+                        img={rec.img}
+                        type={rec.type}
                     />
                 ))
             }
