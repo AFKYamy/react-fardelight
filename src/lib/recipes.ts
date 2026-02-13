@@ -13,7 +13,6 @@ export function findRecipe(slug: string) {
 }
 
 export function selectRecipes(mode: string) {
-    console.log("ran", meals)
     switch (mode) {
         case "meals":
             return meals;

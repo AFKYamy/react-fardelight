@@ -4,6 +4,7 @@ import { RecipesProvider } from "@/contexts/RecipesContext";
 // components
 import Navbar from "@/components/nav/Navbar";
 import Header from "@/components/header/Header";
+import Selector from "./selector/Selector";
 import Cards from "./cards/Cards";
 
 // assets
@@ -19,9 +20,10 @@ export default function Recipes() {
                     heroBg={heroBg}
                     heroLogo={heroLogo}
                 >
-                    <h1>Farmer's</h1>
+                    <h1 className="text-5xl">Farmer's</h1>
                     <h1><span className="text-primary">Delightful</span> Recipes</h1>
                 </Header>
+                <Selector />
                 <Cards />     
                 Recipes
             </RecipesProvider>

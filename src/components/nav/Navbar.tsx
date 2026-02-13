@@ -7,12 +7,12 @@ export default function Navbar() {
     return (
         <nav className="flex justify-between items-center mx-auto py-6 container">
             <Link to="/">
-                <h2 className="text-2xl font-semibold">
+                <h4 className="text-2xl font-semibold">
                     FAR
                     <span className="text-primary">
                         DELIGHT
                     </span>
-                </h2>
+                </h4>
             </Link>
 
             <ul className="flex gap-[3em]">
