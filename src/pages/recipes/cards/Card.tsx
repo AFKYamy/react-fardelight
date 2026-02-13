@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
 // types
-type Card = {
+type CardProps = {
     slug: string;
     name: string;
     img: string;
 }
 
-export default function Card({ slug, name, img }: Card) {
+export default function Card({ slug, name, img }: CardProps) {
     return (
         <div className="flex flex-col justify-between gap-5 p-7 rounded-xl w-[30em] h-[37em] bg-light-gray shadow-md">
             <Link to={`/recipes/${slug}`}>
