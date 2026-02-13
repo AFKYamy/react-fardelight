@@ -16,6 +16,7 @@ export default function Cards() {
                         slug={rec.slug}
                         name={rec.name}
                         img={rec.img}
+                        type={rec.type}
                     />
                 ))
             }
