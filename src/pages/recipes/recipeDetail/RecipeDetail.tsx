@@ -4,6 +4,7 @@ import { Navigate, useParams } from "react-router-dom";
 import Navbar from "@/components/nav/Navbar";
 import Header from "@/components/header/Header";
 import RecipeDetailFeatures from "./RecipeDetailFeatures";
+import RecipeDetailDescription from "./RecipeDetailDescription";
 
 // lib
 import { findRecipe } from "@/lib/recipes";
@@ -23,7 +24,7 @@ export default function RecipeDetail() {
             </Header>
             <div className="mx-auto container">
                 <RecipeDetailFeatures rec={recipe} />
-                RecipeDetail {recipe.name}
+                <RecipeDetailDescription desc={recipe.description} />
             </div>
         </>
     )
