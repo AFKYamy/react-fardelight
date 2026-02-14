@@ -8,8 +8,12 @@ import RecipeDetailDescription from "./RecipeDetailDescription";
 import IngredientsEffects from "./ingredientsEffects/IngredientsEffects";
 import CookingInstructions from "./CookingInstructions";
 
+// ui components
+import Divider from "@/components/ui/Divider";
+
 // lib
 import { findRecipe } from "@/lib/recipes";
+import RandomRecommendations from "./RandomRecommendations";
 
 export default function RecipeDetail() {
     const { slug } = useParams<{ slug: string }>();
@@ -29,6 +33,8 @@ export default function RecipeDetail() {
                 <RecipeDetailDescription desc={rec.description} />
                 <IngredientsEffects rec={rec} />
                 <CookingInstructions rec={rec} />
+                <Divider />
+                <RandomRecommendations recType={rec.type} />
             </div>
         </>
     )
