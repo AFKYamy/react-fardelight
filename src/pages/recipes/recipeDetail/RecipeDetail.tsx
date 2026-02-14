@@ -6,6 +6,7 @@ import Header from "@/components/header/Header";
 import RecipeDetailFeatures from "./features/RecipeDetailFeatures";
 import RecipeDetailDescription from "./RecipeDetailDescription";
 import IngredientsEffects from "./ingredientsEffects/IngredientsEffects";
+import CookingInstructions from "./CookingInstructions";
 
 // lib
 import { findRecipe } from "@/lib/recipes";
@@ -27,6 +28,7 @@ export default function RecipeDetail() {
                 <RecipeDetailFeatures rec={rec} />
                 <RecipeDetailDescription desc={rec.description} />
                 <IngredientsEffects rec={rec} />
+                <CookingInstructions rec={rec} />
             </div>
         </>
     )
