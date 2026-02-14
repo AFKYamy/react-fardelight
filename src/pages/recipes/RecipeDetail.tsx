@@ -1,5 +1,9 @@
 import { Navigate, useParams } from "react-router-dom";
 
+// components
+import Navbar from "@/components/nav/Navbar";
+import Header from "@/components/header/Header";
+
 // lib
 import { findRecipe } from "@/lib/recipes";
 
@@ -11,6 +15,10 @@ export default function RecipeDetail() {
 
     return (
         <>
+            <Navbar />
+            <Header heroBgColor={recipe.type} heroLogo={recipe.img}>
+                <h1>{recipe.name}</h1>
+            </Header>
             RecipeDetail {recipe.name}
         </>
     )

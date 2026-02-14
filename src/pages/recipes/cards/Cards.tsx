@@ -13,10 +13,7 @@ export default function Cards() {
                 selectedRecipes.map((rec) => (
                     <Card
                         key={rec.id}
-                        slug={rec.slug}
-                        name={rec.name}
-                        img={rec.img}
-                        type={rec.type}
+                        rec={rec}
                     />
                 ))
             }
