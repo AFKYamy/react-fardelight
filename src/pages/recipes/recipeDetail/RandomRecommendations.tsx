@@ -7,13 +7,17 @@ import Card from "../cards/Card";
 // lib
 import { capitalizeFirstLetter } from "@/lib/capitalizeFirstLetter";
 
-export default function RandomRecommendations({ recType }: { recType: string }) {
-    const { getRandomRecipe } = useRecipesContext();
+export default function RandomRecommendations() {
+    const { selectedMode, getRandomRecipe } = useRecipesContext();
     const randomRecipes = getRandomRecipe(3);
     
     return (
         <section className="flex flex-col gap-7 my-15">
-            <h3 className="font-semibold">Random <span className="text-primary">{capitalizeFirstLetter(recType)}</span></h3>
+            <h3 className="font-semibold">
+                Related <span className="text-primary">
+                    {capitalizeFirstLetter(`${selectedMode === "all-types" ? "Recipes" : selectedMode}`)}
+                </span>
+            </h3>
             <div className="flex justify-between gap-7 flex-wrap">
                 {randomRecipes.map((rec) => (
                     <Card

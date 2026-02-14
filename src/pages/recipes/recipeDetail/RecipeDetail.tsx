@@ -34,7 +34,7 @@ export default function RecipeDetail() {
                 <IngredientsEffects rec={rec} />
                 <CookingInstructions rec={rec} />
                 <Divider />
-                <RandomRecommendations recType={rec.type} />
+                <RandomRecommendations />
             </div>
         </>
     )
