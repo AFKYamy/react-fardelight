@@ -5,7 +5,7 @@ import './App.css'
 // pages
 import Home from "./pages/home/Home";
 import Recipes from "./pages/recipes/Recipes";
-import RecipeDetail from "./pages/recipes/RecipeDetail";
+import RecipeDetail from "./pages/recipes/recipeDetail/RecipeDetail";
 import Ingredients from "./pages/ingredients/Ingredients";
 import NotFound from "./pages/notFound/NotFound";
 
