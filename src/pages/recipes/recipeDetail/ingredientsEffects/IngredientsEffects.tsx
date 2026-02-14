@@ -8,7 +8,7 @@ export default function IngredientsEffects({ rec }: { rec: FoodType }) {
                 <h3>Ingredients</h3>
                 <ul className="grid grid-cols-[1fr_1fr]">
                     {rec.ingredients.map((ing) => (
-                        <li className="py-1 border-b border-b-[gray] border-dashed w-max text-dark-gray">
+                        <li className="py-1 border-b border-b-[gray] border-dashed w-max text-dark-gray" key={ing.name}>
                             <span>x{ing.amount}</span> {ing.name}
                         </li>
                     ))}
@@ -18,7 +18,7 @@ export default function IngredientsEffects({ rec }: { rec: FoodType }) {
                 <h3>Effects</h3>
                 <ul className="grid grid-cols-[1fr_1fr]">
                     {rec.effects && rec.effects.map((eff) => (
-                        <li className="py-1 border-b border-b-[gray] border-dashed w-max text-dark-gray">
+                        <li className="py-1 border-b border-b-[gray] border-dashed w-max text-dark-gray" key={eff.name}>
                             {eff.name} {eff.duration && <span>{(eff.duration / 1000)}s</span>}
                         </li>
                     ))}
