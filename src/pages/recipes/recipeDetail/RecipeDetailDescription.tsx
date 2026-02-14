@@ -5,7 +5,7 @@ export default function RecipeDetailDescription({ desc }: { desc: string }) {
         <section className="flex flex-col gap-5 my-15">
             <Link 
                 to="/recipes"
-                className="font-bold italic hover:text-gray"
+                className="w-max font-bold italic hover:text-gray"
             >
                 Go back to Recipes
             </Link>
