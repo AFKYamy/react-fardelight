@@ -3,28 +3,30 @@ import { Navigate, useParams } from "react-router-dom";
 // components
 import Navbar from "@/components/nav/Navbar";
 import Header from "@/components/header/Header";
-import RecipeDetailFeatures from "./RecipeDetailFeatures";
+import RecipeDetailFeatures from "./features/RecipeDetailFeatures";
 import RecipeDetailDescription from "./RecipeDetailDescription";
+import IngredientsEffects from "./ingredientsEffects/IngredientsEffects";
 
 // lib
 import { findRecipe } from "@/lib/recipes";
 
 export default function RecipeDetail() {
     const { slug } = useParams<{ slug: string }>();
-    const recipe = slug ? findRecipe(slug) : undefined;
+    const rec = slug ? findRecipe(slug) : undefined;
 
-    if (!recipe) return <Navigate to="/not-found" replace/>;
+    if (!rec) return <Navigate to="/not-found" replace/>;
 
     return (
         <>
             <Navbar />
-            <Header heroBgColor={recipe.type} heroLogo={recipe.img}>
+            <Header heroBgColor={rec.type} heroLogo={rec.img}>
                 <p className="text-lg">Let's make</p>
-                <h1>{recipe.name}</h1>
+                <h1>{rec.name}</h1>
             </Header>
             <div className="mx-auto container">
-                <RecipeDetailFeatures rec={recipe} />
-                <RecipeDetailDescription desc={recipe.description} />
+                <RecipeDetailFeatures rec={rec} />
+                <RecipeDetailDescription desc={rec.description} />
+                <IngredientsEffects rec={rec} />
             </div>
         </>
     )
