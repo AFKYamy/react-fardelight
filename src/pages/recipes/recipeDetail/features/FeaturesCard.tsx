@@ -10,8 +10,8 @@ type FeaturesCardProps = {
 export default function FeaturesCard({ Icon, title, feat }: FeaturesCardProps) {
     return (
         <div className="flex gap-5">
-            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary">
-                <Icon className="w-6 h-6" />
+            <div className="flex items-center justify-center w-12 h-12 rounded-full bg-secondary">
+                <Icon className="w-6 h-6 text-primary" />
             </div>
             <div>
                 <p className="text-gray">{title}</p>
