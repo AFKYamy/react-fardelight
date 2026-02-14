@@ -16,7 +16,7 @@ export default function ZoomImage({ ...attrs }) {
             {/* modal aka zoomed image */}
             {isOpen && (
                 <div
-                    className="flex items-center justify-center p-4 fixed inset-0 z-50 bg-black/70 cursor-zoom-out"
+                    className="flex items-center justify-center p-4 fixed inset-0 z-[10000] bg-black/70 cursor-zoom-out"
                     onClick={() => setIsOpen(false)}
                 >
                     <img

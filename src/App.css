@@ -9,6 +9,10 @@ html {
     font-style: normal;
 }
 
+body {
+    margin-top: 90px;
+}
+
 h1 {
     @apply text-6xl;
 }
@@ -19,6 +23,17 @@ h2 {
 
 h3 {
     @apply text-4xl;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: ease-in-out 0.3s;
+}
+
+.navbar.scrolled {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .navlink:before {
