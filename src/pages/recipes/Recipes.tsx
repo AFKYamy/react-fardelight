@@ -20,8 +20,7 @@ export default function Recipes() {
                 <h1><span className="text-primary">Delightful</span> Recipes</h1>
             </Header>
             <Selector />
-            <Cards />     
-            Recipes
+            <Cards />
         </>
     )
 }
