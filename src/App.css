@@ -11,18 +11,23 @@ html {
 
 body {
     margin-top: 90px;
+    overflow-x: hidden;
 }
 
 h1 {
-    @apply text-6xl;
+    @apply text-4xl leading-tight break-words sm:text-5xl lg:text-6xl;
 }
 
 h2 {
-    @apply text-5xl;
+    @apply text-3xl leading-tight break-words sm:text-4xl lg:text-5xl;
 }
 
 h3 {
-    @apply text-4xl;
+    @apply text-2xl leading-tight break-words sm:text-3xl lg:text-4xl;
+}
+
+.container {
+    @apply px-4 sm:px-6 lg:px-8;
 }
 
 .navbar {
@@ -57,4 +62,10 @@ a, button {
     transition: ease-in-out 0.2s;
     cursor: pointer;
     user-select: none;
+}
+
+@media (max-width: 767px) {
+    body {
+        margin-top: 135px;
+    }
 }

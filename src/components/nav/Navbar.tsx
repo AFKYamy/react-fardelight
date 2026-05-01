@@ -20,8 +20,8 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div className={`navbar fixed w-screen z-[9999] top-0 ${isScrolled && "scrolled"}`}>
-            <nav className="flex justify-between items-center mx-auto py-6 container">
+        <div className={`navbar fixed w-full z-[9999] top-0 ${isScrolled && "scrolled"}`}>
+            <nav className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 mx-auto py-4 sm:justify-between sm:py-6 container">
                 <Link to="/">
                     <h4 className="text-2xl font-semibold">
                         FAR
@@ -31,7 +31,7 @@ export default function Navbar() {
                     </h4>
                 </Link>
 
-                <ul className="flex gap-[3em]">
+                <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm sm:gap-[3em] sm:text-base">
                     <li>
                         <NavLink 
                             to="/" 
@@ -60,7 +60,9 @@ export default function Navbar() {
                     </li>
                 </ul>
 
-                <NavControls />
+                <div className="hidden md:block">
+                    <NavControls />
+                </div>
             </nav>
         </div>
     )

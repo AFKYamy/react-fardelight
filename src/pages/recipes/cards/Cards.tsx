@@ -12,7 +12,7 @@ export default function Cards() {
     const shuffledRecipes = shuffleItems(selectedRecipes);
 
     return (
-        <section className="flex justify-between gap-7 flex-wrap mx-auto my-20 container">
+        <section className="grid grid-cols-1 items-stretch justify-items-center gap-7 mx-auto my-20 sm:grid-cols-2 lg:grid-cols-3 container">
             {
                 shuffledRecipes.map((rec) => (
                     <Card

@@ -18,17 +18,18 @@ const typeBgMap: Record<string, string> = {
 
 export default function Card({ rec }: CardProps) {
     return (
-        <div className="flex flex-col justify-between gap-5 p-7 rounded-xl w-[30em] h-[37em] bg-light-gray shadow-md">
+        <div className="flex h-full w-full max-w-[30rem] flex-col gap-5 rounded-xl bg-light-gray p-5 shadow-md sm:p-6 lg:p-7">
             <Link to={`/recipes/${rec.slug}`} onClick={() => window.scrollTo(0,0)}>
-                <h2 className="font-medium ease-in-out duration-200 hover:opacity-60">{rec.name}</h2>
+                <h2 className="text-2xl font-medium leading-tight ease-in-out duration-200 hover:opacity-60 sm:text-3xl lg:text-4xl">{rec.name}</h2>
             </Link>
             <Link 
                 to={`/recipes/${rec.slug}`} 
                 draggable="false"
                 onClick={() => window.scrollTo(0,0)}
+                className="mt-auto block"
             >
                 <div className={`
-                    rounded-xl overflow-hidden group
+                    aspect-square rounded-xl overflow-hidden group
                     ${typeBgMap[rec.type]}
                 `}>
                     <img 

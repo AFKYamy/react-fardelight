@@ -14,7 +14,7 @@ import type { FoodType } from "@/types/recipes/foods";
 export default function RecipeDetailFeatures({ rec }: { rec: FoodType }) {
     return (
         <section className="flex justify-center my-15">
-            <div className="flex gap-20 flex-wrap">
+            <div className="grid w-full grid-cols-1 gap-7 sm:grid-cols-2 lg:flex lg:w-auto lg:gap-20 lg:flex-wrap">
                 <FeaturesCard title="Type" feat={capitalizeFirstLetter(rec.type)} Icon={MdOutlineFastfood} />
 
                 <FeaturesCard title="Craft In" feat={rec.crafting.source} Icon={LuCookingPot}/>

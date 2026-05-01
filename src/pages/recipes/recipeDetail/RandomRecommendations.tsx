@@ -18,7 +18,7 @@ export default function RandomRecommendations() {
                     {capitalizeFirstLetter(`${selectedMode === "all-types" ? "Recipes" : selectedMode}`)}
                 </span>
             </h3>
-            <div className="flex justify-between gap-7 flex-wrap">
+            <div className="grid grid-cols-1 items-stretch justify-items-center gap-7 sm:grid-cols-2 lg:grid-cols-3">
                 {randomRecipes.map((rec) => (
                     <Card
                         key={rec.id}
