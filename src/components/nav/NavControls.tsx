@@ -8,7 +8,7 @@ export default function NavControls() {
 
     return (
         <form
-            className="flex w-full items-center gap-2 rounded-full bg-light-gray px-3 py-2 shadow-md sm:w-72"
+            className="flex w-full items-center gap-2 rounded-full bg-light-gray px-3 py-2 shadow-md lg:w-72"
             role="search"
             onSubmit={handleSubmit}
         >

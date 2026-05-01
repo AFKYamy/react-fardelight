@@ -21,7 +21,7 @@ export default function Navbar() {
 
     return (
         <div className={`navbar fixed w-full z-[9999] top-0 ${isScrolled && "scrolled"}`}>
-            <nav className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 mx-auto py-4 sm:justify-between sm:py-6 container">
+            <nav className="flex flex-col items-center gap-3 mx-auto py-3 lg:flex-row lg:justify-between lg:gap-x-8 lg:py-6 container">
                 <Link to="/">
                     <h4 className="text-2xl font-semibold">
                         FAR
@@ -31,7 +31,7 @@ export default function Navbar() {
                     </h4>
                 </Link>
 
-                <ul className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm sm:gap-[3em] sm:text-base">
+                <ul className="flex w-full flex-wrap justify-center gap-x-5 gap-y-2 text-xs sm:text-sm lg:w-auto lg:gap-[3em] lg:text-base">
                     <li>
                         <NavLink 
                             to="/" 
@@ -60,7 +60,7 @@ export default function Navbar() {
                     </li>
                 </ul>
 
-                <div className="w-full sm:w-auto">
+                <div className="w-full max-w-md lg:w-auto">
                     <NavControls />
                 </div>
             </nav>

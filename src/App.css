@@ -64,8 +64,8 @@ a, button {
     user-select: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
     body {
-        margin-top: 135px;
+        margin-top: 155px;
     }
 }
