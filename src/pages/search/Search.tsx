@@ -1,37 +1,20 @@
-import { useEffect, useMemo, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
 import { LuSearch } from "react-icons/lu";
 
-import type { FormEvent } from "react";
+// hooks
+import { useSearchPage } from "@/hooks/useSearchPage";
 
 // components
 import Navbar from "@/components/nav/Navbar";
 import Card from "@/pages/recipes/cards/Card";
 
-// lib
-import { searchRecipes } from "@/lib/recipes";
-
 export default function Search() {
-    const [searchParams] = useSearchParams();
-    const navigate = useNavigate();
-    const query = searchParams.get("q") ?? "";
-    const [inputValue, setInputValue] = useState(query);
-
-    const results = useMemo(() => searchRecipes(query), [query]);
-
-    useEffect(() => {
-        setInputValue(query);
-    }, [query]);
-
-    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-
-        const trimmedQuery = inputValue.trim();
-
-        if (!trimmedQuery) return;
-
-        navigate(`/search?q=${encodeURIComponent(trimmedQuery)}`);
-    }
+    const {
+        query,
+        inputValue,
+        setInputValue,
+        results,
+        handleSubmit
+    } = useSearchPage();
 
     return (
         <>
