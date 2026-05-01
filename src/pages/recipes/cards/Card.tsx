@@ -5,6 +5,7 @@ import type { FoodType } from "@/types/recipes/foods";
 
 type CardProps = {
     rec: FoodType;
+    label?: string;
 }
 
 const typeBgMap: Record<string, string> = {
@@ -16,9 +17,14 @@ const typeBgMap: Record<string, string> = {
     "finger-foods": "bg-finger-foods",
 };
 
-export default function Card({ rec }: CardProps) {
+export default function Card({ rec, label }: CardProps) {
     return (
         <div className="flex h-full w-full max-w-[30rem] flex-col gap-5 rounded-xl bg-light-gray p-5 shadow-md sm:p-6 lg:p-7">
+            {label && (
+                <span className="w-max rounded-full bg-secondary px-3 py-1 text-sm font-semibold text-primary">
+                    {label}
+                </span>
+            )}
             <Link to={`/recipes/${rec.slug}`} onClick={() => window.scrollTo(0,0)}>
                 <h2 className="text-2xl font-medium leading-tight ease-in-out duration-200 hover:opacity-60 sm:text-3xl lg:text-4xl">{rec.name}</h2>
             </Link>

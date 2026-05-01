@@ -1,7 +1,7 @@
 // data
 import { meals, drinks } from "@/data/recipes";
 
-const allRecipes = [
+export const allRecipes = [
     ...meals,
     ...drinks
 ];
@@ -21,4 +21,23 @@ export function selectRecipes(mode: string) {
         default:
             return allRecipes;
     }
+}
+
+export function searchRecipes(query: string) {
+    const normalizedQuery = query.trim().toLowerCase();
+
+    if (!normalizedQuery) return [];
+
+    return allRecipes.filter((rec) => {
+        const searchableText = [
+            rec.name,
+            rec.type,
+            rec.description,
+            rec.crafting.source,
+            ...rec.ingredients.map((ing) => ing.name),
+            ...(rec.effects?.map((eff) => eff.name) ?? []),
+        ].join(" ").toLowerCase();
+
+        return searchableText.includes(normalizedQuery);
+    });
 }

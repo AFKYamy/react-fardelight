@@ -60,7 +60,7 @@ export default function Navbar() {
                     </li>
                 </ul>
 
-                <div className="hidden md:block">
+                <div className="w-full sm:w-auto">
                     <NavControls />
                 </div>
             </nav>
