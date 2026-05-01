@@ -20,7 +20,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <div className={`navbar fixed w-full z-[9999] top-0 ${isScrolled && "scrolled"}`}>
+        <div className={`navbar sticky w-full z-[9999] top-0 ${isScrolled && "scrolled"}`}>
             <nav className="flex flex-col items-center gap-3 mx-auto py-3 lg:flex-row lg:justify-between lg:gap-x-8 lg:py-6 container">
                 <Link to="/">
                     <h4 className="text-2xl font-semibold">
