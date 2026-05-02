@@ -22,6 +22,11 @@ export default function IngredientsEffects({ rec }: { rec: FoodType }) {
                             {eff.name} {eff.duration && <span>{(eff.duration / 1000)}s</span>}
                         </li>
                     ))}
+                    {!rec.effects && (
+                        <li className="py-1 border-b border-b-[gray] border-dashed w-fit max-w-full text-dark-gray break-words">
+                            -
+                        </li>
+                    )}
                 </ul>
             </div>
         </section>

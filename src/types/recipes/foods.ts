@@ -1,4 +1,4 @@
-type FoodCategories = "finger_foods" | "meals" | "feasts" | "sweets" | "drinks" | "pet_foods";
+type FoodCategories = "finger-foods" | "meals" | "feasts" | "sweets" | "drinks" | "pet-foods";
 type FoodEffects = "Regeneration" | "Nausea" | "Comfort" | "Nourishment" | "Speed" | "Instant Health" | "Absorption" | "Clears Fire burning" | "Clears Latest Harmful Effect";
 
 export type FoodType = {

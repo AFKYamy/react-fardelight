@@ -1,9 +1,10 @@
 // data
-import { meals, drinks } from "@/data/recipes";
+import { meals, drinks, finger_foods } from "@/data/recipes";
 
 export const allRecipes = [
     ...meals,
-    ...drinks
+    ...drinks,
+    ...finger_foods,
 ];
 
 export function findRecipe(slug: string) {
@@ -18,6 +19,8 @@ export function selectRecipes(mode: string) {
             return meals;
         case "drinks":
             return drinks;
+        case "finger-foods":
+            return finger_foods;
         default:
             return allRecipes;
     }

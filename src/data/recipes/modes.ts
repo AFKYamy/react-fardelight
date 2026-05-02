@@ -16,4 +16,8 @@ export const modes: Modes[] = [
         name: "Drinks",
         id: "drinks",
     },
+    {
+        name: "Finger Foods",
+        id: "finger-foods"
+    },
 ];

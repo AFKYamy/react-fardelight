@@ -7,3 +7,11 @@ export function capitalizeFirstLetter(text: string) {
     
     return capitalizedText;
 }
+
+export function cleanString(text: string) {
+    return text.replace(/[-\W]/g, ' ');
+}
+
+export function normalizeText(text: string) {
+    return cleanString(capitalizeFirstLetter(text));
+}
